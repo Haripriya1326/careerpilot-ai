@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareerPilot AI — Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="cp-topbar">
+    <div class="cp-brand">
+      <span class="cp-brand-mark">CP</span>
+      CareerPilot AI
+    </div>
+    <nav class="cp-nav">
+      <a href="dashboard.html" class="active">Dashboard</a>
+      <a href="profile.html">Profile</a>
+      <a href="index.html" id="cp-logout">Sign out</a>
+    </nav>
+  </header>
+
+  <main class="cp-shell">
+    <p class="cp-eyebrow">Flight deck</p>
+    <h1 class="cp-heading">Welcome aboard, <span id="cp-pilot-name">Pilot</span> ✦</h1>
+    <p class="cp-subheading">Upload your resume to extract skills, check originality, and get matched with live opportunities.</p>
+
+    <!-- Upload panel -->
+    <section class="cp-panel">
+      <h2 class="cp-panel-title">Resume upload</h2>
+
+      <form id="cp-upload-form">
+        <label class="cp-upload-zone" id="cp-drop-zone" for="cp-resume-input">
+          <div id="cp-drop-label">Drop your PDF resume here, or click to browse</div>
+          <div class="cp-upload-filename" id="cp-filename-display"></div>
+          <input type="file" id="cp-resume-input" accept="application/pdf" required />
+        </label>
+
+        <div style="margin-top: 18px;">
+          <button type="submit" class="cp-btn" id="cp-upload-btn">Run resume scan</button>
+        </div>
+      </form>
+
+      <div class="cp-status" id="cp-upload-status"></div>
+    </section>
+
+    <!-- Results panel: hidden until first successful upload -->
+    <section class="cp-panel" id="cp-results-panel" style="display:none;">
+      <h2 class="cp-panel-title">Scan results</h2>
+
+      <div class="cp-readout-row">
+        <div class="cp-readout">
+          <div class="cp-readout-label">Predicted domain</div>
+          <div class="cp-readout-value" id="cp-domain-value">—</div>
+        </div>
+        <div class="cp-readout">
+          <div class="cp-readout-label">Skills detected</div>
+          <div class="cp-readout-value" id="cp-skill-count">0</div>
+        </div>
+      </div>
+
+      <div class="cp-job-skills-label">Extracted skills</div>
+      <div class="cp-chip-row" id="cp-extracted-skills"></div>
+
+      <div style="margin-top: 26px;">
+        <div class="cp-job-skills-label">Originality gauge</div>
+        <div class="cp-gauge-wrap">
+          <div class="cp-gauge" id="cp-gauge">
+            <span class="cp-gauge-text" id="cp-gauge-text">0%</span>
+          </div>
+          <p class="cp-gauge-caption" id="cp-gauge-caption">
+            No similarity detected against resumes already on file.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recommendations panel -->
+    <section class="cp-panel">
+      <h2 class="cp-panel-title">Recommended flight paths</h2>
+      <div id="cp-jobs-container">
+        <div class="cp-empty">Upload a resume to see job matches here.</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

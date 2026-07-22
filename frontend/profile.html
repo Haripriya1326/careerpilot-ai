@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareerPilot AI — Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="cp-topbar">
+    <div class="cp-brand">
+      <span class="cp-brand-mark">CP</span>
+      CareerPilot AI
+    </div>
+    <nav class="cp-nav">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="profile.html" class="active">Profile</a>
+      <a href="index.html">Sign out</a>
+    </nav>
+  </header>
+
+  <main class="cp-shell">
+    <p class="cp-eyebrow">Pilot record</p>
+    <h1 class="cp-heading">Your profile</h1>
+    <p class="cp-subheading">Everything CareerPilot AI has on file from your most recent resume scan.</p>
+
+    <section class="cp-panel" id="cp-profile-panel">
+      <div class="cp-empty" id="cp-profile-empty">
+        No resume on file yet. Head to the dashboard and run a scan first.
+      </div>
+
+      <div id="cp-profile-content" style="display:none;">
+        <div class="cp-readout-row">
+          <div class="cp-readout">
+            <div class="cp-readout-label">Name</div>
+            <div class="cp-readout-value" id="cp-profile-name">—</div>
+          </div>
+          <div class="cp-readout">
+            <div class="cp-readout-label">Email</div>
+            <div class="cp-readout-value" id="cp-profile-email" style="font-size: 1rem;">—</div>
+          </div>
+          <div class="cp-readout">
+            <div class="cp-readout-label">Domain</div>
+            <div class="cp-readout-value" id="cp-profile-domain">—</div>
+          </div>
+        </div>
+
+        <div class="cp-job-skills-label">Skill inventory</div>
+        <div class="cp-chip-row" id="cp-profile-skills"></div>
+
+        <div class="cp-status cp-status-show" id="cp-profile-plagiarism" style="margin-top: 24px;"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

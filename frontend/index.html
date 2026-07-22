@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CareerPilot AI - Login</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header class="cp-topbar">
+
+        <div class="cp-brand">
+            <span class="cp-brand-mark">CP</span>
+            CareerPilot AI
+        </div>
+
+    </header>
+
+    <main class="cp-login-wrap">
+
+        <div class="cp-blob cp-blob-a"></div>
+        <div class="cp-blob cp-blob-b"></div>
+        <div class="cp-blob cp-blob-c"></div>
+
+        <section class="cp-login-card">
+
+            <div class="cp-compass"></div>
+
+            <h1 class="cp-heading">
+                Welcome Back
+            </h1>
+
+            <p class="cp-subheading">
+                Login to continue to your AI Career Dashboard
+            </p>
+
+            <!-- LOGIN FORM -->
+
+            <form id="cp-login-form">
+
+                <div class="cp-field">
+
+                    <label>Email</label>
+
+                    <input
+                        type="email"
+                        id="login-email"
+                        placeholder="Enter your email"
+                        required>
+
+                </div>
+
+                <div class="cp-field">
+
+                    <label>Password</label>
+
+                    <input
+                        type="password"
+                        id="login-password"
+                        placeholder="Enter your password"
+                        required>
+
+                </div>
+
+                <button
+                    class="cp-btn"
+                    type="submit">
+
+                    Login
+
+                </button>
+
+            </form>
+
+            <div id="login-message"></div>
+
+            <button
+                id="create-account-btn"
+                class="cp-link-btn"
+                type="button">
+
+                Create an Account
+
+            </button>
+
+        </section>
+
+    </main>
+
+    <!-- SIGNUP MODAL -->
+
+    <div id="signup-modal">
+
+        <div class="signup-box">
+
+            <span id="close-signup">&times;</span>
+
+            <h2>Create Account</h2>
+
+            <form id="signup-form">
+
+                <div class="cp-field">
+
+                    <label>Name</label>
+
+                    <input
+                        type="text"
+                        id="signup-name"
+                        placeholder="Enter your name"
+                        required>
+
+                </div>
+
+                <div class="cp-field">
+
+                    <label>Email</label>
+
+                    <input
+                        type="email"
+                        id="signup-email"
+                        placeholder="Enter your email"
+                        required>
+
+                </div>
+
+                <div class="cp-field">
+
+                    <label>Password</label>
+
+                    <input
+                        type="password"
+                        id="signup-password"
+                        placeholder="Enter your password"
+                        required>
+
+                </div>
+
+                <button
+                    class="cp-btn"
+                    type="submit">
+
+                    Register
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="login.js"></script>
+
+</body>
+
+</html>
