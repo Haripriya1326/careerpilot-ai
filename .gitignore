@@ -9,7 +9,8 @@ __pycache__/
 *.pyc
 
 # Virtual environment
-venv/
+venv
+/
 
 # Database
 *.db
@@ -17,5 +18,9 @@ venv/
 # Uploaded resumes
 backend/uploads/
 
+#VS Code
+.vscode/
+
 # Mac files
 .DS_Store
+
